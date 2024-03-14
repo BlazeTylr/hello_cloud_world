@@ -1,5 +1,6 @@
 # Use an appropriate base image with Python installed
-FROM python:3.11
+ARG PYTHON_VERSION=3.11.2
+FROM python:${PYTHON_VERSION}-slim as base
 
 # Set the working directory inside the container
 WORKDIR /app
